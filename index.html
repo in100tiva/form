@@ -78,55 +78,9 @@
   </div>
 </div>
 
-<!-- Modal de Agendamento -->
-<dialog id="booking_modal" class="modal">
-  <form method="dialog" class="modal-box">
-    <h3 class="font-bold text-lg">Faça sua Reserva</h3>
-    <div class="py-4 space-y-4">
-      <div class="form-control">
-        <label class="label">
-          <span class="label-text">Nome</span>
-        </label>
-        <input type="text" placeholder="Seu nome completo" class="input input-bordered" />
-      </div>
-      
-      <div class="form-control">
-        <label class="label">
-          <span class="label-text">Email</span>
-        </label>
-        <input type="email" placeholder="seu@email.com" class="input input-bordered" />
-      </div>
-      
-      <div class="grid grid-cols-2 gap-4">
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">Check-in</span>
-          </label>
-          <input type="date" class="input input-bordered" />
-        </div>
-        
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">Check-out</span>
-          </label>
-          <input type="date" class="input input-bordered" />
-        </div>
-      </div>
-    </div>
-    <div class="modal-action">
-      <button class="btn btn-primary">Confirmar Reserva</button>
-      <button class="btn">Fechar</button>
-    </div>
-  </form>
-</dialog>
 
 <script>
-  // Adiciona eventos aos botões de reserva
-  document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
-    button.addEventListener('click', () => {
-      document.getElementById('booking_modal').showModal();
-    });
-  });
+
 </script>
 
 </body>
