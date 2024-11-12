@@ -1,0 +1,133 @@
+<html><head><base href="/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Paradise - Sua Estadia Perfeita</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.3/dist/full.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<!-- Hero Section -->
+<div class="hero min-h-screen" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1000&h=600');">
+  <div class="hero-overlay bg-opacity-60"></div>
+  <div class="hero-content text-center text-neutral-content">
+    <div class="max-w-md">
+      <h1 class="mb-5 text-5xl font-bold">Hotel Paradise</h1>
+      <p class="mb-5">Descubra o verdadeiro significado de luxo e conforto em nossa estadia exclusiva</p>
+      <button class="btn btn-primary"><a href="reserva.html" target="_blank" rel="noopener noreferrer">Reservar Agora</a></button>
+    </div>
+  </div>
+</div>
+
+<!-- Benefícios Section -->
+<div class="py-16 bg-base-200">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12">Nossos Benefícios</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Benefício 1 -->
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body items-center text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <h3 class="card-title">Café da Manhã Inclusivo</h3>
+          <p>Desfrute de um café da manhã gourmet completo todos os dias da sua estadia.</p>
+        </div>
+      </div>
+
+      <!-- Benefício 2 -->
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body items-center text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <h3 class="card-title">Wi-Fi de Alta Velocidade</h3>
+          <p>Conexão de internet rápida e estável em todas as áreas do hotel.</p>
+        </div>
+      </div>
+
+      <!-- Benefício 3 -->
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body items-center text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+          </svg>
+          <h3 class="card-title">Serviço 24 Horas</h3>
+          <p>Nossa equipe está sempre disponível para atender suas necessidades.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA Section -->
+<div class="bg-primary text-primary-content py-16">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center justify-between">
+      <div class="mb-8 md:mb-0">
+        <h2 class="text-3xl font-bold mb-4">Reserve Sua Estadia Hoje!</h2>
+        <p class="text-xl">Aproveite nossas condições especiais e garanta momentos inesquecíveis.</p>
+      </div>
+      <div class="flex gap-4">
+        <button class="btn btn-secondary">Ver Quartos</button>
+        <button class="btn btn-outline btn-secondary">Fazer Reserva</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Agendamento -->
+<dialog id="booking_modal" class="modal">
+  <form method="dialog" class="modal-box">
+    <h3 class="font-bold text-lg">Faça sua Reserva</h3>
+    <div class="py-4 space-y-4">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Nome</span>
+        </label>
+        <input type="text" placeholder="Seu nome completo" class="input input-bordered" />
+      </div>
+      
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Email</span>
+        </label>
+        <input type="email" placeholder="seu@email.com" class="input input-bordered" />
+      </div>
+      
+      <div class="grid grid-cols-2 gap-4">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Check-in</span>
+          </label>
+          <input type="date" class="input input-bordered" />
+        </div>
+        
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Check-out</span>
+          </label>
+          <input type="date" class="input input-bordered" />
+        </div>
+      </div>
+    </div>
+    <div class="modal-action">
+      <button class="btn btn-primary">Confirmar Reserva</button>
+      <button class="btn">Fechar</button>
+    </div>
+  </form>
+</dialog>
+
+<script>
+  // Adiciona eventos aos botões de reserva
+  document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
+    button.addEventListener('click', () => {
+      document.getElementById('booking_modal').showModal();
+    });
+  });
+</script>
+
+</body>
+</html>
